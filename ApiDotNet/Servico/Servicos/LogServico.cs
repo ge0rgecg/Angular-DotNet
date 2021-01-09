@@ -47,6 +47,13 @@ namespace Servico.Servicos
             return new Retorno<SemConteudo> { Ok = true };
         }
 
+        public async Task<Retorno<SemConteudo>> AtualizarLog(int id, Log log)
+        {
+            await _logRepositorio.Update(id, log);
+
+            return new Retorno<SemConteudo> { Ok = true };
+        }
+
         public async Task<Retorno<SemConteudo>> AdicionarListaLogs(List<Log> logs)
         {
             await _logRepositorio.CreateList(logs);

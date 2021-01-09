@@ -12,6 +12,8 @@ namespace Servico.Interface
 
         Task<Retorno<SemConteudo>> AdicionarLog(Log log);
 
+        Task<Retorno<SemConteudo>> AtualizarLog(int id, Log log);
+
         Task<Retorno<SemConteudo>> AdicionarListaLogs(List<Log> logs);
 
     }

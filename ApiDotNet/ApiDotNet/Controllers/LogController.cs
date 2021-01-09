@@ -23,12 +23,12 @@ namespace ApiDotNet.Controllers
         [HttpGet("id")]
         public IActionResult Get(int id)
         {
-            if (id < 0)
+            if (id < 1)
             {
                 return BadRequest("Campo Id inválido.");
             }
 
-            return Ok(_logServico.ObterLogs());
+            return Ok(_logServico.ObterLog(id));
         }
 
         [HttpGet]
@@ -48,6 +48,24 @@ namespace ApiDotNet.Controllers
             }
 
             return Ok(_logServico.AdicionarLog(log));
+        }
+
+        [HttpPut("id")]
+        public IActionResult Put(int id, Log log) 
+        {
+            var notificacao = log.Validacao();
+
+            if(id < 1)
+            {
+                notificacao.Add("Campo Id é obrigatorio");
+            }
+
+            if (notificacao.Any())
+            {
+                return BadRequest(notificacao);
+            }
+
+            return Ok(_logServico.AtualizarLog(id, log));
         }
 
         [HttpPost("UploadFIle")]

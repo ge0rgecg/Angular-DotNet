@@ -15,7 +15,7 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Banco", "Banco\Banco.sqlpro
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{C1AF84D4-7658-4FBD-A391-1767394187D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.test", "Api.test\Api.test.csproj", "{4667467E-DB1F-4259-8FA0-44187605E90B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiDotNet.test", "Api.test\ApiDotNet.test.csproj", "{4667467E-DB1F-4259-8FA0-44187605E90B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
