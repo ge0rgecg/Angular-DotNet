@@ -1,6 +1,22 @@
-.upload{
-    font-weight:bold;
-    color:#28a745;
-    margin-left: 15px;
-    line-height: 36px;
+.inputfile + label {
+    font-size: 1em;
+    color: white;
+    background-color: #673ab7;
+    padding: 8px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: red;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
 }
