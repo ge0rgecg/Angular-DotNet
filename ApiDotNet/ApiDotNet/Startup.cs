@@ -80,6 +80,8 @@ namespace ApiDotNet
                 s.SwaggerEndpoint("v1/swagger.json", "Comanda API V1");
             });
 
+            app.UseCors(builder => builder.WithOrigins("*").AllowAnyHeader().AllowAnyMethod());
+
             app.UseRouting();
 
             app.UseAuthorization();
