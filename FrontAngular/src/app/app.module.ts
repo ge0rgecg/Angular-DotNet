@@ -34,6 +34,7 @@ import { LogCreateComponent } from './components/log/log-create/log-create.compo
 import { LogReadComponent } from './components/log/log-read/log-read.component';
 import { LogUpdateComponent } from './components/log/log-update/log-update.component';
 import { LogCrudComponent } from './views/log-crud/log-crud.component';
+import { UploadComponent } from './components/upload/upload/upload.component';
 
 registerLocaleData(localePt);
 
@@ -49,7 +50,8 @@ registerLocaleData(localePt);
     LogCreateComponent,
     LogReadComponent,
     LogUpdateComponent,
-    LogCrudComponent
+    LogCrudComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,

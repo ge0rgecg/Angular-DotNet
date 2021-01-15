@@ -69,7 +69,7 @@ namespace ApiDotNet.Controllers
         }
 
         [HttpPost("UploadFIle")]
-        public IActionResult Post(List<IFormFile> files)
+        public IActionResult Post([FromForm(Name = "uploadedFile")] List<IFormFile> files)
         {
             foreach (var item in files)
             {
