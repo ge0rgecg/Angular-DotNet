@@ -1,0 +1,35 @@
+<mat-card>
+    <mat-card-title>Alterar Log</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Chave"
+            [(ngModel)]="log.chave" name="chave">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Data de Log</mat-label>
+            <input matInput [matDatepicker]="picker" 
+            [(ngModel)]="log.dataLog" name="dataLog">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Texto"
+            [(ngModel)]="log.texto" name="texto">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Codigo de retorno"
+            [(ngModel)]="log.codigoRetorno" name="codigoRetorno">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Retorno"
+            [(ngModel)]="log.retorno" name="retorno">
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="updateLog()" color="primary">
+        Atualizar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>
